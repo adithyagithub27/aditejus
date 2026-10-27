@@ -36,6 +36,3 @@ Tested on 27 Oct 2026 with Ollama 0.40.11, qwen2.5:3b, nomic-embed-text, ollama-
 🔔 Subscribe for free AI courses: https://www.youtube.com/@aditejus?sub_confirmation=1
 
 License: MIT. Use, copy and modify freely.
-
----
-Studio notes (not in the public copy): recorded with `record.py` (real runs in `kit/tut1v/runs.json`). Public copy: new repo under github.com/aditejus (pending; an earlier copy was pushed to adithyagithub27/aditejus-reels. commit 491addd before the hold, left as is).
