@@ -1,7 +1,7 @@
-"""RAG Tutorial for Beginners: a free, local RAG chatbot in Python (ADITEJUS tutorial 2026-W44-tut1).
+"""RAG Tutorial for Beginners: a free, local RAG chatbot in Python.
 
 Stack (all free, runs on a laptop): Ollama (embeddings + chat) + chromadb (local vector DB) + pypdf.
-Models (studio standard, COURSE_RULEBOOK): nomic-embed-text (embeddings), qwen2.5:3b (chat). Any similar small model works.
+Models: nomic-embed-text (embeddings), qwen2.5:3b (chat). Any similar small model works.
 
 Setup:
     ollama pull nomic-embed-text
@@ -10,7 +10,7 @@ Setup:
     python3 rag_chat.py index docs/       # read + chunk + embed your files
     python3 rag_chat.py chat              # ask questions about them
 
-STATUS: verified end-to-end on 27 Oct 2026 with a real PDF (runs in kit/tut1v/runs.json).
+STATUS: verified end-to-end on 27 Oct 2026 with a real PDF.
 Scanned PDFs have no text layer: run OCR first (e.g. ocrmypdf), otherwise they are skipped.
 """
 import sys, pathlib
