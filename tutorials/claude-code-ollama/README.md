@@ -22,6 +22,7 @@ Code and commands for the ADITEJUS tutorial **"Claude Code Free with Ollama: Beg
 3b. **Raise the context length** (the step most guides skip). Unless you have a big GPU, Ollama gives models a 4,096-token context by default, and Claude Code's prompt is far larger, so Ollama silently cuts it. In our test with default settings, Ollama logged `truncating input prompt limit=2050 prompt=24073`. Ollama recommends at least 64k for coding tools:
    - Ollama app: Settings, move the context length slider.
    - Or start the server with: `OLLAMA_CONTEXT_LENGTH=64000 ollama serve`
+   - If Ollama is already running (the Linux installer starts it as a service; on Mac/Windows the app may be open), `ollama serve` fails with "address already in use". Quit the app or run `sudo systemctl stop ollama` first, or set the variable in the service settings instead.
 4. Go into your project and launch:
    ```
    cd expense-tracker
@@ -76,7 +77,7 @@ OLLAMA_HOST=127.0.0.1:11435 ollama launch claude --model qwen3.5:2b
 
 Options: `--port` (default 11435), `--upstream` (default `http://127.0.0.1:11434`), `--log FILE` (optional; logs timings only, never prompts). The relay listens on 127.0.0.1 only.
 
-Simpler alternative: turn that 5-minute idle limit off with `export API_FORCE_IDLE_TIMEOUT=0` (Claude Code docs, environment variables). `API_TIMEOUT_MS` (default 10 minutes) is a separate request timeout; raise it too if requests still time out.
+Simpler alternative: turn that 5-minute idle limit off with `export API_FORCE_IDLE_TIMEOUT=0` (Claude Code docs, environment variables). This may not be enough on very slow machines, because other stream watchdogs can still stop a long silent pause; keepalive.py is the reliable route. `API_TIMEOUT_MS` (default 10 minutes) is a separate request timeout; raise it too if requests still time out.
 
 ## How the video was recorded
 
