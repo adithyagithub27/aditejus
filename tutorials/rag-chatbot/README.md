@@ -1,6 +1,6 @@
 # RAG chatbot in Python (free, local)
 
-Code for the ADITEJUS tutorial **"RAG Tutorial for Beginners: Build a Chatbot in Python, Free (2026)"**. It's a chatbot that answers questions from your own PDFs and text files, and names the file it used. It runs on your laptop with Ollama and ChromaDB, with no API key and no bill.
+Code for the ADITEJUS tutorial **"RAG Tutorial for Beginners: Free Python Chatbot (2026)"**. It's a chatbot that answers questions from your own PDFs and text files, and names the file it used. It runs on your laptop with Ollama and ChromaDB, with no API key and no bill.
 
 - Video: on the ADITEJUS channel, https://www.youtube.com/@aditejus (the tutorial publishes Sat 31 Oct 2026)
 - Go deeper (free, 1 hour): Complete RAG Course for Beginners, https://youtu.be/C23OIVPeodU
